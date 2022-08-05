@@ -74,4 +74,4 @@
 \newcommand{\spare}{\begin{center}\vspace*{-2.5em}\tikz{\draw[very thick,line cap=round] (0,0) to (\textwidth-1.2,0);}\vspace*{-2em}\end{center}}
 
 \newenvironment{problem}[1]{\setlength{\parindent}{0cm}\textbf{题 #1}\setlength{\parskip}{0em}\quad}{\\}
-\newenvironment{solution}{\setlength{\parindent}{0cm}\setlength{\parskip}{0em}\textbf{解}\quad\it}{}
+\newenvironment{solution}{\setlength{\parindent}{0cm}\setlength{\parskip}{0em}\textbf{解}\quad\kaishu}{}
