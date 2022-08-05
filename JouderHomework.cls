@@ -60,6 +60,10 @@
     \newcommand*{\fangsong}{\CJKfamily{zhfs}}
 }{\relax}
 
+\ctexset{
+    punct=kaiming,
+}
+
 
 \geometry{scale=0.8}
 \linespread{1.5}
