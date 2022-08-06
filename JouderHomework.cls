@@ -25,6 +25,10 @@
 \RequirePackage{amsmath}
 \RequirePackage{geometry}
 \RequirePackage{tikz}
+\RequirePackage{enumitem}
+\RequirePackage{booktabs}
+\RequirePackage{multirow}
+\RequirePackage[per-mode=symbol]{siunitx}
 
 % 英文字体设置
 \ifdefstring{\JOUDER@fonten}{newcm}{
@@ -64,10 +68,12 @@
     punct=kaiming,
 }
 
+\usetikzlibrary{shapes.multipart}
 
 \geometry{scale=0.8}
 \linespread{1.5}
 \setlength{\parskip}{0.8em}
+\setlist{labelindent=\parindent, before=\setlength{\itemsep}{0pt}\setlength{\partopsep}{0pt}\setlength{\parsep}{\parskip}}
 
 % \newcommand{\spare}{\begin{center}\vspace*{-2.5em}\rule{\textwidth}{1.5pt}\vspace*{-2em}\end{center}}
 
