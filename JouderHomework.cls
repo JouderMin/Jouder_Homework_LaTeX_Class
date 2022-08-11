@@ -7,6 +7,7 @@
 \newcommand{\ekv}[1]{\kvsetkeys{JOUDER}{#1}}
 
 \PassOptionsToPackage{math-style=ISO, mathrm=sym}{unicode-math}
+\PassOptionsToPackage{no-math}{fontspec}
 
 \DeclareStringOption[newcm]{fonten}
 \DeclareStringOption[founder]{fontcn}
@@ -14,6 +15,7 @@
 \DeclareVoidOption{newcm}{\ekv{fonten=newcm}}
 \DeclareVoidOption{stixtwo}{\ekv{fonten=stixtwo}}
 \DeclareVoidOption{concrete}{\ekv{fonten=concrete}}
+\DeclareVoidOption{cm}{\ekv{fonten=cm}}
 
 \DeclareVoidOption{ctex}{\ekv{fontcn=ctex}}
 \DeclareVoidOption{founder}{\ekv{fontcn=founder}}
@@ -29,20 +31,6 @@
 \RequirePackage{booktabs}
 \RequirePackage{multirow}
 \RequirePackage[per-mode=symbol]{siunitx}
-
-% 英文字体设置
-\ifdefstring{\JOUDER@fonten}{newcm}{
-    \RequirePackage[default]{fontsetup}
-}{\relax}
-
-\ifdefstring{\JOUDER@fonten}{stixtwo}{
-    \RequirePackage[stixtwo]{fontsetup}
-}{\relax}
-
-\ifdefstring{\JOUDER@fonten}{concrete}{
-    % \PassOptionsToPackage{math-style=upright}{unicode-math}
-    \RequirePackage[concrete]{fontsetup}
-}{\relax}
 
 % 中文字体设置
 \ifdefstring{\JOUDER@fontcn}{ctex}{
@@ -62,6 +50,28 @@
     \newcommand*{\heiti}{\CJKfamily{zhhei}}
     \newcommand*{\kaishu}{\CJKfamily{zhkai}}
     \newcommand*{\fangsong}{\CJKfamily{zhfs}}
+}{\relax}
+
+% 英文字体设置
+\ifdefstring{\JOUDER@fonten}{newcm}{
+    \RequirePackage[default]{fontsetup}
+}{\relax}
+
+\ifdefstring{\JOUDER@fonten}{stixtwo}{
+    \RequirePackage[stixtwo]{fontsetup}
+}{\relax}
+
+\ifdefstring{\JOUDER@fonten}{concrete}{
+    % \PassOptionsToPackage{math-style=upright}{unicode-math}
+    \RequirePackage[concrete]{fontsetup}
+}{\relax}
+
+\ifdefstring{\JOUDER@fonten}{cm}{
+    \RequirePackage[OT1]{fontenc}
+    \RequirePackage{amsfonts}
+    \renewcommand{\rmdefault}{cmr}
+    \renewcommand{\sfdefault}{cmss}
+    \renewcommand{\ttdefault}{cmtt}
 }{\relax}
 
 \ctexset{
