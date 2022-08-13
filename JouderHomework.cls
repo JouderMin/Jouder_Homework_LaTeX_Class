@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{JouderHomework}[2022/08/04 v0.1 JouderHomework document class]
+\ProvidesClass{JouderHomework}[2022/08/04 v0.2 JouderHomework document class]
 
 \RequirePackage{kvoptions}
 \RequirePackage{etoolbox}
