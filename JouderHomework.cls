@@ -16,6 +16,7 @@
 \DeclareVoidOption{stixtwo}{\ekv{fonten=stixtwo}}
 \DeclareVoidOption{concrete}{\ekv{fonten=concrete}}
 \DeclareVoidOption{cm}{\ekv{fonten=cm}}
+\DeclareVoidOption{euler}{\ekv{fonten=euler}}
 
 \DeclareVoidOption{ctex}{\ekv{fontcn=ctex}}
 \DeclareVoidOption{founder}{\ekv{fontcn=founder}}
@@ -64,6 +65,12 @@
 \ifdefstring{\JOUDER@fonten}{concrete}{
     % \PassOptionsToPackage{math-style=upright}{unicode-math}
     \RequirePackage[concrete]{fontsetup}
+}{\relax}
+
+\ifdefstring{\JOUDER@fonten}{euler}{
+    \PassOptionsToPackage{math-style=upright, mathrm=text}{unicode-math}
+    \RequirePackage[concrete]{fontsetup}
+    \setmathfont{euler.otf}
 }{\relax}
 
 \ifdefstring{\JOUDER@fonten}{cm}{
