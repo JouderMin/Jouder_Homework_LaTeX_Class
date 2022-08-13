@@ -12,6 +12,7 @@
 | fonten=stixtwo | STIX Two Text |
 | fonten=concrete | Computer Modern Concrete |
 | fonten=cm | Computer Modern |
+| fonten=euler | Computer Modern Concrete with NeoEuler Math font |
 
 | 选项 | 字体名 |
 |----|----|
