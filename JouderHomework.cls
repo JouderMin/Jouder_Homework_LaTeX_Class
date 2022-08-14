@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{JouderHomework}[2022/08/04 v0.2 JouderHomework document class]
+\ProvidesClass{JouderHomework}[2022/08/04 v0.3 JouderHomework document class]
 
 \RequirePackage{kvoptions}
 \RequirePackage{etoolbox}
@@ -11,6 +11,7 @@
 
 \DeclareStringOption[newcm]{fonten}
 \DeclareStringOption[founder]{fontcn}
+\DeclareStringOption[cn]{lang}
 
 \DeclareVoidOption{newcm}{\ekv{fonten=newcm}}
 \DeclareVoidOption{stixtwo}{\ekv{fonten=stixtwo}}
@@ -20,6 +21,9 @@
 
 \DeclareVoidOption{ctex}{\ekv{fontcn=ctex}}
 \DeclareVoidOption{founder}{\ekv{fontcn=founder}}
+
+\DeclareVoidOption{cn}{\ekv{lang=cn}}
+\DeclareVoidOption{en}{\ekv{lang=en}}
 
 \ProcessKeyvalOptions*\relax
 
@@ -81,6 +85,17 @@
     \renewcommand{\ttdefault}{cmtt}
 }{\relax}
 
+% 语言设置
+\ifdefstring{\JOUDER@lang}{cn}{
+    \newcommand{\problemlabel}{题}
+    \newcommand{\solutionlabel}{解}
+}{\relax}
+
+\ifdefstring{\JOUDER@lang}{en}{
+    \newcommand{\problemlabel}{Problem}
+    \newcommand{\solutionlabel}{Solution}
+}{\relax}
+
 \ctexset{
     punct=kaiming,
 }
@@ -96,5 +111,5 @@
 
 \newcommand{\spare}{\begin{center}\vspace*{-2.5em}\tikz{\draw[very thick,line cap=round] (0,0) to (\textwidth-1.2,0);}\vspace*{-2em}\end{center}}
 
-\newenvironment{problem}[1]{\setlength{\parindent}{0cm}\textbf{题 #1}\setlength{\parskip}{0em}\quad}{\par}
-\newenvironment{solution}{\setlength{\parindent}{0cm}\setlength{\parskip}{0em}\textbf{解}\quad\kaishu}{\par}
+\newenvironment{problem}[1]{\setlength{\parindent}{0cm}\textbf{\problemlabel{} #1}\setlength{\parskip}{0em}\quad}{\par}
+\newenvironment{solution}{\setlength{\parindent}{0cm}\setlength{\parskip}{0em}\textbf{\solutionlabel}\quad\kaishu}{\par}
