@@ -6,7 +6,7 @@
 \SetupKeyvalOptions{family=JOUDER, prefix=JOUDER@, setkeys=\kvsetkeys}
 \newcommand{\ekv}[1]{\kvsetkeys{JOUDER}{#1}}
 
-\PassOptionsToPackage{math-style=ISO, mathrm=sym}{unicode-math}
+\PassOptionsToPackage{math-style=TeX, mathrm=sym}{unicode-math}
 \PassOptionsToPackage{no-math}{fontspec}
 
 \DeclareStringOption[newcm]{fonten}
