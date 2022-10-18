@@ -107,7 +107,7 @@
 \usetikzlibrary{shapes.multipart}
 
 \geometry{scale=0.8}
-\linespread{1.5}
+\linespread{1.3}
 % \setlength{\parskip}{0.25em}
 \setlist{labelindent=\parindent, before=\setlength{\itemsep}{0pt}\setlength{\partopsep}{0pt}\setlength{\parsep}{\parskip}}
 
