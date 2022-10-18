@@ -15,6 +15,7 @@
 
 \DeclareVoidOption{newcm}{\ekv{fonten=newcm}}
 \DeclareVoidOption{stixtwo}{\ekv{fonten=stixtwo}}
+\DeclareVoidOption{libertinus}{\ekv{fonten=libertinus}}
 \DeclareVoidOption{concrete}{\ekv{fonten=concrete}}
 \DeclareVoidOption{cm}{\ekv{fonten=cm}}
 \DeclareVoidOption{euler}{\ekv{fonten=euler}}
@@ -64,6 +65,10 @@
 
 \ifdefstring{\JOUDER@fonten}{stixtwo}{
     \RequirePackage[stixtwo]{fontsetup}
+}{\relax}
+
+\ifdefstring{\JOUDER@fonten}{libertinus}{
+    \RequirePackage[libertinus]{fontsetup}
 }{\relax}
 
 \ifdefstring{\JOUDER@fonten}{concrete}{
