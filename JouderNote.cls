@@ -66,9 +66,19 @@
 \fancyfoot[L]{
     \pagebar
 }
-% \fancyfoot[c]{}
 \fancyfoot[r]{
     \thepage
+}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \pagestyle{fancy}
+    \fancyfoot[L]{
+        \pagebar
+    }
+    \fancyfoot[r]{
+        \thepage
+    }
 }
 
 % 中文字体设置
