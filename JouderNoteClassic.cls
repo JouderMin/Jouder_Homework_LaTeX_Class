@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{JouderBook}[2022/08/04 v0.1 JouderBook document class]
+\ProvidesClass{JouderNoteClassic}[2022/08/04 v0.1 JouderBook document class]
 
 \RequirePackage{kvoptions}
 \RequirePackage{etoolbox}
@@ -101,6 +101,17 @@
     \newcommand*{\fangsong}{\CJKfamily{zhfs}}
 }{\relax}
 
+\ifdefstring{\JOUDER@fontcn}{SourceHan}{
+    \RequirePackage[fontset=none]{ctex}
+    \setCJKmainfont{Source Han Serif SC}
+    \setCJKsansfont{Source Han Sans SC}
+    \setCJKmonofont{Source Han Sans SC}
+    \setCJKfamilyfont{zhsong}{Source Han Serif SC}
+    \setCJKfamilyfont{zhhei}{Source Han Sans SC}
+    \newcommand*{\songti}{\CJKfamily{zhsong}}
+    \newcommand*{\heiti}{\CJKfamily{zhhei}}
+}{\relax}
+
 % 英文字体设置
 \ifdefstring{\JOUDER@fonten}{newcm}{
     \RequirePackage[default]{fontsetup}
@@ -157,7 +168,7 @@
 
 \newenvironment{problem}[1]{\setlength{\parindent}{0cm}\textbf{\problemlabel{} #1}\setlength{\parskip}{0em}\quad}{\par}
 \newenvironment{solution}{\setlength{\parindent}{0cm}\setlength{\parskip}{0em}\textbf{\solutionlabel}\quad\kaishu}{\par}
-\newenvironment{note}{\begin{mdframed}[style=JouderNote]\sffamily}{\end{mdframed}}
+\newenvironment{note}{\begin{mdframed}[style=JouderNote]}{\end{mdframed}}
 
 \RequirePackage{amsthm}
 \RequirePackage{thmtools}

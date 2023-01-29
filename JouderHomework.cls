@@ -58,6 +58,17 @@
     \newcommand*{\fangsong}{\CJKfamily{zhfs}}
 }{\relax}
 
+\ifdefstring{\JOUDER@fontcn}{SourceHan}{
+    \RequirePackage[fontset=none]{ctex}
+    \setCJKmainfont{Source Han Serif SC}
+    \setCJKsansfont{Source Han Sans SC}
+    \setCJKmonofont{Source Han Sans SC}
+    \setCJKfamilyfont{zhsong}{Source Han Serif SC}
+    \setCJKfamilyfont{zhhei}{Source Han Sans SC}
+    \newcommand*{\songti}{\CJKfamily{zhsong}}
+    \newcommand*{\heiti}{\CJKfamily{zhhei}}
+}{\relax}
+
 % 英文字体设置
 \ifdefstring{\JOUDER@fonten}{newcm}{
     \RequirePackage[default]{fontsetup}
