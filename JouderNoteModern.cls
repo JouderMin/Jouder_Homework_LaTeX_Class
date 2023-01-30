@@ -13,9 +13,9 @@
 \DeclareStringOption[zzAw]{fontcn}
 \DeclareStringOption[cn]{lang}
 
-\DeclareVoidOption{zzAw}{\ekv{fonten=newcm}}
+\DeclareVoidOption{zzAw}{\ekv{fonten=zzAw}}
 
-\DeclareVoidOption{zzAw}{\ekv{fontcn=founder}}
+\DeclareVoidOption{zzAw}{\ekv{fontcn=zzAw}}
 
 \DeclareVoidOption{cn}{\ekv{lang=cn}}
 \DeclareVoidOption{en}{\ekv{lang=en}}
