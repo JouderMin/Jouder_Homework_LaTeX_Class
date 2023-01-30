@@ -91,6 +91,7 @@
     \RequirePackage[default]{fontsetup}
     \setmainfont[BoldFont={FZFW ZhuZi A YuanS B}]{FZFW ZhuZi A YuanS M}
     \setsansfont[BoldFont={FZFW ZhuZi A YuanS B}]{FZFW ZhuZi A YuanS M}
+    \setmonofont{Comic Mono}
 }{\relax}
 
 % 语言设置
