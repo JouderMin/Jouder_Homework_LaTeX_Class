@@ -10,12 +10,12 @@
 \PassOptionsToPackage{no-math}{fontspec}
 
 \DeclareStringOption[zzAw]{fonten}
-\DeclareStringOption[zzAw]{fontcn}
+\DeclareStringOption[zzAwc]{fontcn}
 \DeclareStringOption[cn]{lang}
 
 \DeclareVoidOption{zzAw}{\ekv{fonten=zzAw}}
 
-\DeclareVoidOption{zzAw}{\ekv{fontcn=zzAw}}
+\DeclareVoidOption{zzAwc}{\ekv{fontcn=zzAw}}
 
 \DeclareVoidOption{cn}{\ekv{lang=cn}}
 \DeclareVoidOption{en}{\ekv{lang=en}}
@@ -76,11 +76,11 @@
 }
 
 % 中文字体设置
-\ifdefstring{\JOUDER@fontcn}{zzAw}{
+\ifdefstring{\JOUDER@fontcn}{zzAwc}{
     \RequirePackage[punct=kaiming, fontset=none]{ctex}
-    \setCJKmainfont[BoldFont={FZFW ZhuZi A YuanS B}]{FZFW ZhuZi A YuanS M}
-    \setCJKsansfont[BoldFont={FZFW ZhuZi A YuanS B}]{FZFW ZhuZi A YuanS M}
-    \setCJKmonofont[BoldFont={FZFW ZhuZi A YuanS B}]{FZFW ZhuZi A YuanS M}
+    \setCJKmainfont[BoldFont={FZFW ZhuZi A YuanS B}, AutoFakeSlant]{FZFW ZhuZi A YuanS M}
+    \setCJKsansfont[BoldFont={FZFW ZhuZi A YuanS B}, AutoFakeSlant]{FZFW ZhuZi A YuanS M}
+    \setCJKmonofont[BoldFont={FZFW ZhuZi A YuanS B}, AutoFakeSlant]{FZFW ZhuZi A YuanS M}
     \setCJKfamilyfont{zhyuan}[BoldFont={FZFW ZhuZi A YuanS B}]{FZFW ZhuZi A YuanS M}
     \newcommand*{\yuanti}{\CJKfamily{zhyuan}}
 }{\relax}
@@ -89,8 +89,8 @@
 
 \ifdefstring{\JOUDER@fonten}{zzAw}{
     \RequirePackage[default]{fontsetup}
-    \setmainfont[BoldFont={FZFW ZhuZi A YuanS B}]{FZFW ZhuZi A YuanS M}
-    \setsansfont[BoldFont={FZFW ZhuZi A YuanS B}]{FZFW ZhuZi A YuanS M}
+    \setmainfont[BoldFont={FZFW ZhuZi A YuanS B}, AutoFakeSlant]{FZFW ZhuZi A YuanS M}
+    \setsansfont[BoldFont={FZFW ZhuZi A YuanS B}, AutoFakeSlant]{FZFW ZhuZi A YuanS M}
     \setmonofont{Comic Mono}
 }{\relax}
 
@@ -109,7 +109,7 @@
 
 \geometry{a4paper, left=1.5in, right=1in, top=1.2in, bottom=1.2in}
 \linespread{1.3}
-% \setlength{\parskip}{0.25em}
+\setlength{\parskip}{0.3em}
 \setlist{labelindent=\parindent, before=\setlength{\itemsep}{0pt}\setlength{\partopsep}{0pt}\setlength{\parsep}{\parskip}}
 
 % \newcommand{\spare}{\begin{center}\vspace*{-2.5em}\rule{\textwidth}{1.5pt}\vspace*{-2em}\end{center}}
