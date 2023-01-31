@@ -22,7 +22,7 @@
 
 \ProcessKeyvalOptions*\relax
 
-\LoadClass[a4paper, 12pt]{article}
+\LoadClass[a4paper]{article}
 
 \RequirePackage{amsmath}
 \RequirePackage{geometry}

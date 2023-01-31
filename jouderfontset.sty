@@ -1,14 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{jouderfontset}[2023/01/31]
 
-\DeclareOption{ctex}{
-    \RequirePackage[fontset=none,punct=kaiming]{ctex}
-}
-
-\DeclareOption{xeCJK}{
-    \RequirePackage{xeCJK}
-    \xeCJKsetup{PunctStyle=kaiming}
-}
+\RequirePackage[]{xeCJK}
+\xeCJKsetup{PunctStyle=kaiming}
 
 \DeclareOption{founderfree}{
     \setCJKmainfont[BoldFont={FZHei-B01},ItalicFont={FZKai-Z03},AutoFakeBold]{FZShuSong-Z01}
@@ -28,4 +22,4 @@
     \setCJKmonofont[AutoFakeBold,AutoFakeSlant]{FZKeBenFangSongS-R-GB}
 }
 
-\ProcessOptions\relax
+\ProcessOptions*\relax

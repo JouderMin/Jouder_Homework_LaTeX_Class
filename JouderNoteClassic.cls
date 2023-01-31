@@ -22,13 +22,14 @@
 
 \DeclareVoidOption{ctex}{\ekv{fontcn=ctex}}
 \DeclareVoidOption{founder}{\ekv{fontcn=founder}}
+\DeclareVoidOption{none}{\ekv{fontcn=none}}
 
 \DeclareVoidOption{cn}{\ekv{lang=cn}}
 \DeclareVoidOption{en}{\ekv{lang=en}}
 
 \ProcessKeyvalOptions*\relax
 
-\LoadClass[a4paper, 12pt]{article}
+\LoadClass[a4paper]{article}
 
 \RequirePackage{amsmath}
 \RequirePackage{geometry}
@@ -111,6 +112,8 @@
     \newcommand*{\songti}{\CJKfamily{zhsong}}
     \newcommand*{\heiti}{\CJKfamily{zhhei}}
 }{\relax}
+
+\ifdefstring{\JOUDER@fontcn}{none}{}{\relax}
 
 % 英文字体设置
 \ifdefstring{\JOUDER@fonten}{newcm}{
