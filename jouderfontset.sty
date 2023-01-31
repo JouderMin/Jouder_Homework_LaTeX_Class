@@ -1,0 +1,31 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{jouderfontset}[2023/01/31]
+
+\DeclareOption{ctex}{
+    \RequirePackage[fontset=none,punct=kaiming]{ctex}
+}
+
+\DeclareOption{xeCJK}{
+    \RequirePackage{xeCJK}
+    \xeCJKsetup{PunctStyle=kaiming}
+}
+
+\DeclareOption{founderfree}{
+    \setCJKmainfont[BoldFont={FZHei-B01},ItalicFont={FZKai-Z03},AutoFakeBold]{FZShuSong-Z01}
+    \setCJKsansfont[AutoFakeBold,AutoFakeSlant]{FZHei-B01}
+    \setCJKmonofont[AutoFakeBold,AutoFakeSlant]{FZFangSong-Z02}
+}
+
+\DeclareOption{founderpaid}{
+    \setCJKmainfont[BoldFont={FZHei-B01},ItalicFont={FZNewKai-Z03},AutoFakeBold]{FZNewShuSong-Z10}
+    \setCJKsansfont[AutoFakeBold,AutoFakeSlant]{FZHei-B01}
+    \setCJKmonofont[AutoFakeBold,AutoFakeSlant]{FZKeBenFangSongS-R-GB}
+}
+
+\DeclareOption{founderzhuzi}{
+    \setCJKmainfont[BoldFont={FZFW ZhuZi MinchoS B},ItalicFont={FZJiaoCai GuiFanKai},AutoFakeBold]{FZFW ZhuZi MinchoS R}
+    \setCJKsansfont[BoldFont={FZFW ZhuZi MinchoS B},AutoFakeSlant]{FZFW ZhuZi HeiS R}
+    \setCJKmonofont[AutoFakeBold,AutoFakeSlant]{FZKeBenFangSongS-R-GB}
+}
+
+\ProcessOptions\relax
